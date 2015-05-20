@@ -20,14 +20,17 @@ describe Board do
   describe "gameOver?" do
     it "should return true on a full board" do
       board = Board.new('XXO,OOX,XOX')
+      expect(board.gameOver?).to eq(true)
     end
 
     it "should return true on a filled column with same pieces" do
-
+      board = Board.new('  X,  X,  X')
+      expect(board.gameOver?).to eq(true)
     end
 
     it "should return true on a filled row with same pieces" do
-
+      board = Board.new('XXX,   ,   ')
+      expect(board.gameOver?).to eq(true)
     end
   end
 end
