@@ -23,6 +23,13 @@ describe Board do
       expect(board.gameOver?).to eq(true)
     end
 
+    describe "checkRow" do
+      it "should find a full row" do
+
+      end
+
+    end
+
     it "should return true on a filled column with same pieces" do
       board = Board.new('  X,  X,  X')
       expect(board.gameOver?).to eq(true)

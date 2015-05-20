@@ -14,6 +14,18 @@ class Board
     false
   end
 
+  def winner
+
+  end
+
+  def checkRow(row)
+    @board[row].first != " " && @board[row].all? {|piece| piece == @board[row].first}
+  end
+
+  def checkColumn
+
+  end
+
   def to_s
     @board.map {|row| row.join('|') }.join("\n-----\n")
   end
